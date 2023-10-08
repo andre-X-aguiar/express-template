@@ -7,6 +7,9 @@ const { router } = require('./routers/router')
 // Codificando o corpo das requisições para JSON
 app.use(express.json());
 
+// Desabilitando o Header "x-powered-by" que identifica o web server Express
+app.disable('x-powered-by');
+
 // Definindo o Template Engine EJS: SSR (Server Side Rendering)
 app.set('view engine', 'ejs');
 app.set('views', './views');
